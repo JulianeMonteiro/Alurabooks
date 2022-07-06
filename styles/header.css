@@ -1,0 +1,66 @@
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*tira o static padrao e desbloqueia o relative*/
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    /*o relative deixa o menu na posicao do menu e o top faz com que ele afaste o topo 100% do menu */
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+/*--container__botao seleciona o input.
+  --Checked é uma pseudo classe. Ele detecta se o input checkbox esta preenchido.
+  o til(~) é um combinador CSS = ele procura um outro elemento que vem em seguida 
+  daquele de antes. Eh o mais proximos que podemos chegar de uma condicional no CSS*/
+/*--Em outras palavras: se o checkbox tiver clicado, ele vai mostrar os itens da lista*/
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+}
