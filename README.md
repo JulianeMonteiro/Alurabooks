@@ -10,3 +10,11 @@ Link para visualizar o projeto: https://julianemonteiro.github.io/Alurabooks/
 * CSS
 * SwiperJS
 
+## Aulas
+* Aplicando a metodologia mobile-first
+* Criando Header, Flexbox e @import
+* Integrando o Carrossel com SwiperJS
+* Selecionando Media Queries
+* Produzindo CSS no desktop
+* Publicando o projeto
+
